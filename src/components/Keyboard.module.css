@@ -1,0 +1,57 @@
+.keyboard {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+}
+
+.btn {
+  width: 100%;
+  border: 3px solid #000;
+  background: #fff;
+  aspect-ratio: 1 / 1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.btn.active {
+  background-color: hsl(200, 100%, 50%);
+  color: #fff;
+}
+
+.btn.inactive {
+  opacity: 0.3;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
+}
+
+@media screen and (max-width: 992px) {
+  .keyboard {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  }
+}
