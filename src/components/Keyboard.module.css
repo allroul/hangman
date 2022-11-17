@@ -1,25 +1,26 @@
 .keyboard {
   display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 }
 
 .btn {
   width: 100%;
-  border: 3px solid #000;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
   background: #fff;
+  border: none;
   aspect-ratio: 1 / 1;
-  font-size: 2.5rem;
   text-transform: uppercase;
-  padding: 0.5rem;
-  font-weight: bold;
   cursor: pointer;
+  border-radius: 12px;
   color: #000;
   transition: all 0.3s ease;
 }
 
 .btn.active {
-  background-color: hsl(200, 100%, 50%);
+  background-color: #e3104b;
   color: #fff;
 }
 
@@ -33,25 +34,35 @@
 
 .btn:hover:not(:disabled),
 .btn:focus:not(:disabled) {
-  background-color: hsl(200, 100%, 75%);
+  background-color: #e3104b;
 }
 
-@media screen and (max-width: 992px) {
-  .keyboard {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  }
-
+@media screen and (max-width: 1366px) {
   .btn {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .btn {
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .keyboard {
-    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .keyboard {
+    grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+  }
+
+  .btn {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .keyboard {
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+  }
+
+  .btn {
+    font-size: 28px;
   }
 }

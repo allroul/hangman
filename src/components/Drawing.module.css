@@ -1,370 +1,215 @@
 .head {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 10px solid #000;
+  width: 32px;
   position: absolute;
-  top: 50px;
-  right: -30px;
+  top: 271px;
+  left: 665px;
 }
 
 .body {
-  width: 10px;
-  height: 90px;
-  background: #000;
+  width: 52.64px;
   position: absolute;
-  top: 119px;
-  right: 0px;
+  top: 312px;
+  left: 658px;
 }
 
 .leftArm {
-  width: 85px;
-  height: 10px;
-  background: #000;
+  width: 26.61px;
   position: absolute;
-  top: 130px;
-  right: 2px;
-  rotate: -53deg;
-  border-radius: 20px 0 0 20px;
-  transform-origin: right bottom;
+  top: 310px;
+  left: 640px;
 }
 
 .rightArm {
-  width: 85px;
-  height: 10px;
-  background: #000;
+  width: 28.5px;
   position: absolute;
-  top: 130px;
-  right: -77px;
-  rotate: 53deg;
-  border-radius: 0 20px 20px 0;
-  transform-origin: left bottom;
+  top: 311px;
+  left: 696px;
 }
 
 .leftLeg {
-  width: 100px;
-  height: 10px;
-  background: #000;
+  width: 29px;
   position: absolute;
-  top: 200px;
-  right: 1px;
-  rotate: -66deg;
-  border-radius: 20px 0 0 20px;
-  transform-origin: right bottom;
+  top: 393px;
+  left: 661px;
 }
 
 .rightLeg {
-  width: 100px;
-  height: 10px;
-  background: #000;
+  width: 28px;
   position: absolute;
-  top: 200px;
-  right: -90px;
-  rotate: 66deg;
-  border-radius: 0 20px 20px 0;
-  transform-origin: left bottom;
-}
-
-.face {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 50px;
-  right: -30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.eyes {
-  display: flex;
-  justify-content: space-between;
-  width: 25px;
-  margin-top: 28px;
-}
-
-.leftEye {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #000;
-  display: block;
-  position: relative;
-}
-
-.leftEye::after {
-  content: '';
-  position: absolute;
-  background-color: aqua;
-  width: 2px;
-  height: 4px;
-  bottom: -4px;
-  right: 2px;
-  border-radius: 5px;
-}
-
-.rightEye {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #000;
-  display: block;
-  position: relative;
-}
-
-.rightEye::after {
-  content: '';
-  position: absolute;
-  background-color: aqua;
-  width: 2px;
-  height: 4px;
-  bottom: -4px;
-  right: 2px;
-  border-radius: 5px;
-}
-
-.smile {
-  border-radius: 100%;
-  width: 23px;
-  height: 16px;
-  margin-top: 7px;
-  border-bottom: 4px solid #000;
-  transform: rotate(180deg);
-}
-
-.smileWinner {
-  transform: rotate(0deg);
-  margin-top: -4px;
-}
-
-.dialogue {
-  position: absolute;
-  padding: 7px 12px;
-  border: 2px solid #000;
-  border-radius: 10px 10px 0 10px;
-  right: 42px;
-  top: 24px;
-}
-
-.dialogue::after {
-  content: '';
-  display: block;
-  border: 0.6rem solid transparent;
-  border-bottom: none;
-  border-top-color: #000;
-  position: absolute;
-  bottom: -11px;
-  right: -2px;
-  width: 0;
-  height: 0;
-}
-
-.stand {
-  height: 10px;
-  width: 250px;
-  background: #000;
-}
-
-.column {
-  height: 400px;
-  width: 10px;
-  background: #000;
-  margin-left: 120px;
-}
-
-.bar {
-  height: 10px;
-  width: 200px;
-  background: #000;
-  margin-left: 120px;
+  top: 393px;
+  left: 687px;
 }
 
 .rope {
-  height: 50px;
+  height: 70px;
   width: 10px;
-  background: #000;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 205px;
+  left: 681px;
 }
 
-@media screen and (max-width: 992px) {
-  .stand {
-    width: 190px;
-  }
-
-  .column {
-    height: 300px;
-    margin-left: 90px;
-  }
-
-  .bar {
-    width: 180px;
-    margin-left: 90px;
-  }
-
+@media screen and (max-width: 1900px) {
   .rope {
-    height: 45px;
+    top: 83px;
+    left: 594px;
   }
 
   .head {
-    top: 44px;
-    right: -25px;
-    width: 40px;
-    height: 40px;
+    top: 149px;
+    left: 578px;
   }
 
   .body {
-    right: 1px;
-    top: 103px;
-    height: 80px;
+    top: 190px;
+    left: 571px;
   }
 
   .leftArm {
-    width: 60px;
-    top: 110px;
-    right: 3px;
+    top: 188px;
+    left: 553px;
   }
 
   .rightArm {
-    width: 60px;
-    top: 110px;
-    right: -51px;
+    top: 189px;
+    left: 609px;
   }
 
   .leftLeg {
-    width: 85px;
-    top: 173px;
-    right: 2px;
+    top: 271px;
+    left: 574px;
   }
 
   .rightLeg {
-    width: 85px;
-    top: 173px;
-    right: -75px;
-  }
-
-  .face {
-    top: 44px;
-    right: -25px;
-    width: 60px;
-    height: 60px;
-  }
-
-  .smile {
-    width: 17px;
-    height: 12px;
-    margin-top: 5px;
-    border-width: 3px;
-  }
-
-  .smileWinner {
-    margin-top: -3px;
-  }
-
-  .eyes {
-    margin-top: 24px;
-  }
-
-  .rightEye {
-    width: 5px;
-    height: 5px;
-  }
-
-  .leftEye {
-    width: 5px;
-    height: 5px;
+    top: 271px;
+    left: 600px;
   }
 }
 
-@media screen and (max-width: 576px) {
-  .stand {
-    width: 160px;
-  }
-
-  .column {
-    height: 300px;
-    margin-left: 75px;
-  }
-
-  .bar {
-    width: 150px;
-    margin-left: 75px;
-  }
-
+@media screen and (max-width: 1366px) {
   .rope {
-    height: 45px;
+    top: 90px;
+    left: 451px;
+    height: auto;
+    width: 8px;
   }
 
   .head {
-    right: -19px;
-    width: 35px;
-    height: 35px;
-    border-width: 7px;
+    width: 23px;
+    top: 142px;
+    left: 440px;
   }
 
   .body {
-    right: 3px;
-    top: 92px;
-    height: 75px;
+    top: 172px;
+    left: 434.5px;
+    width: 39.5px;
+  }
+
+  .rightArm {
+    top: 170px;
+    left: 462px;
+    width: 19.5px;
+  }
+
+  .leftArm {
+    top: 170.5px;
+    left: 423px;
+    width: 17.5px;
+  }
+
+  .leftLeg {
+    top: 232px;
+    left: 436.5px;
+    width: 22px;
+  }
+
+  .rightLeg {
+    top: 232px;
+    left: 456px;
+    width: 21px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .rope {
+    top: 216px;
+    left: 233px;
     width: 7px;
   }
 
-  .leftArm {
-    width: 65px;
-    top: 101px;
-    right: 4px;
-    height: 7px;
+  .head {
+    width: 22px;
+    top: 261px;
+    left: 222px;
+  }
+
+  .body {
+    top: 289px;
+    left: 217px;
+    width: 36.5px;
   }
 
   .rightArm {
-    width: 65px;
-    top: 101px;
-    right: -56px;
-    height: 7px;
+    top: 288px;
+    left: 242.5px;
+    width: 20px;
   }
 
-  .leftLeg {
-    width: 80px;
-    top: 158px;
-    right: 2px;
-    height: 7px;
-    border-radius: 20px;
+  .leftArm {
+    top: 288px;
+    left: 205px;
+    width: 17.5px;
   }
 
   .rightLeg {
-    width: 80px;
-    top: 158px;
-    right: -69px;
-    height: 7px;
-    border-radius: 20px;
+    top: 346px;
+    left: 236px;
+    width: 20px;
   }
 
-  .face {
-    width: 55px;
-    height: 55px;
-    right: -22px;
+  .leftLeg {
+    top: 345px;
+    left: 219px;
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .rope {
+    top: 166px;
+    left: 182px;
+    width: 7px;
   }
 
-  .eyes {
-    margin-top: 20px;
+  .head {
+    top: 210px;
+    left: 171px;
   }
 
-  .smile {
-    border-width: 2.5px;
+  .body {
+    top: 238.5px;
+    left: 166px;
+    width: 37px;
   }
 
-  .smileWinner {
-    margin-top: -2px;
+  .leftArm {
+    top: 237px;
+    left: 154px;
+    width: 17.5px;
   }
 
-  .dialogue {
-    right: 34px;
-    font-size: 12px;
+  .rightArm {
+    top: 237px;
+    left: 192.5px;
   }
 
-  .dialogue::after {
-    bottom: -8px;
-    border-width: 0.4rem;
+  .leftLeg {
+    top: 295px;
+    left: 168px;
+  }
+
+  .rightLeg {
+    top: 295px;
+    left: 186px;
   }
 }

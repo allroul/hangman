@@ -13,7 +13,7 @@ export const Word = ({ guessedLetters, wordToGuess, reveal = false }: WordProps)
           <span
             style={{
               visibility: guessedLetters.includes(letter) || reveal ? 'visible' : 'hidden',
-              color: !guessedLetters.includes(letter) && reveal ? 'red' : '#000',
+              color: !guessedLetters.includes(letter) && reveal ? '#E3104B' : '#fff',
             }}>
             {letter}
           </span>

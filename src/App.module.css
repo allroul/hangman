@@ -1,45 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
 .app {
-  background-color: rgba(0, 0, 0, 0.1);
+  background: url(/hangman/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  max-width: 1920px;
+  min-height: 1080px;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 950px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   margin: 0 auto;
+  padding: 10px 20px 50px 20px;
   align-items: center;
-  padding: 10px 20px 30px 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tree {
+  max-width: 1093px;
+  width: 100%;
+  position: absolute;
+  left: 50px;
+  top: -286px;
+}
+
+.mainTextWrapper {
+  font-size: 64px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #2a152b;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 299px;
+  left: 820px;
 }
 
 .mainText {
-  font-size: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tryAgain {
+  padding: 16px;
+  width: 148px;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #2a152b;
+  color: #f1c8b0;
+  border: 3px solid #2a152b;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tryAgain:hover {
+  background-color: transparent;
+  color: #2a152b;
 }
 
 .keyboardWrapper {
   align-self: stretch;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1900px) {
+  .tree {
+    left: -67px;
+    top: -406px;
+  }
+
   .wrapper {
-    gap: 1rem;
+    padding: 30px 10px;
+    align-items: flex-start;
+  }
+
+  .mainTextWrapper {
+    font-size: 56px;
+    top: 173px;
+    left: 684px;
+  }
+
+  .tryAgain {
+    padding: 12px;
+  }
+
+  .container {
+    min-height: 100vh;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1366px) {
+  .tree {
+    max-width: 720px;
+    left: 18px;
+    top: -230px;
+  }
+
+  .mainTextWrapper {
+    font-size: 50px;
+    top: 158px;
+    left: 529px;
+  }
+
+  .tryAgain {
+    width: 130px;
+    font-size: 19px;
+  }
+
+  .wrapper {
+    max-width: 676px;
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app {
+    background-position: unset;
+    background-position-x: -276px;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  .tree {
+    left: -127px;
+    top: -50px;
+    max-width: none;
+    width: 600px;
+  }
+
+  .mainTextWrapper {
+    font-size: 34px;
+    top: 267px;
+    left: 262px;
+  }
+
   .mainText {
-    font-size: 1rem;
+    align-items: center;
+  }
+
+  .tryAgain {
+    width: 100px;
+    font-size: 15px;
+    padding: 6px;
+  }
+
+  .wrapper {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .tree {
+    left: -163px;
+    top: -84px;
+    width: 565px;
+  }
+
+  .mainTextWrapper {
+    top: 211px;
+    left: 208px;
+  }
+}
+
+@media screen and (min-height: 1081px) {
+  .container {
+    min-height: 1080px;
   }
 
   .app {
-    padding: 10px 15px;
+    background-position: bottom;
+  }
+
+  .tree {
+    left: 25px;
+  }
+}
+
+@media screen and (min-height: 1081px) and (max-width: 1024px) and (min-width: 600px) {
+  .container {
+    min-height: 620px;
   }
 }

@@ -22,6 +22,11 @@ function App() {
     setGuessedLetters((currentLetters) => [...currentLetters, letter]);
   };
 
+  const restartGame = () => {
+    setGuessedLetters([]);
+    setWordToGuess(getWord());
+  };
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key;
@@ -57,20 +62,37 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <div className={styles.wrapper}>
-        <div className={styles.mainText}>
-          {isWinner && 'Winner! Refresh to try again!'}
-          {isLoser && 'Failed! Refresh to try again!'}
+      <div className={styles.container}>
+        <img src="/hangman/tree.png" className={styles.tree} />
+        <Drawing numberOfGuesses={inCorrectLetters.length} />
+        <div className={styles.mainTextWrapper}>
+          {isWinner && (
+            <div className={styles.mainText}>
+              Winner!
+              <button className={styles.tryAgain} onClick={() => restartGame()}>
+                Try again
+              </button>
+            </div>
+          )}
+          {isLoser && (
+            <div className={styles.mainText}>
+              Game Over!
+              <button className={styles.tryAgain} onClick={() => restartGame()}>
+                Try again
+              </button>
+            </div>
+          )}
         </div>
-        <Drawing reveal={isLoser} isWinner={isWinner} numberOfGuesses={inCorrectLetters.length} />
-        <Word reveal={isLoser} wordToGuess={wordToGuess} guessedLetters={guessedLetters} />
-        <div className={styles.keyboardWrapper}>
-          <Keyboard
-            disabled={isLoser || isWinner}
-            activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
-            inActiveLetters={inCorrectLetters}
-            addGuessedLetter={addGuessedLetter}
-          />
+        <div className={styles.wrapper}>
+          <Word reveal={isLoser} wordToGuess={wordToGuess} guessedLetters={guessedLetters} />
+          <div className={styles.keyboardWrapper}>
+            <Keyboard
+              disabled={isLoser || isWinner}
+              activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
+              inActiveLetters={inCorrectLetters}
+              addGuessedLetter={addGuessedLetter}
+            />
+          </div>
         </div>
       </div>
     </div>

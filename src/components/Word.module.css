@@ -1,25 +1,51 @@
 .wordWrapper {
   display: flex;
-  gap: 0.25em;
-  font-size: 6rem;
-  font-weight: bold;
+  gap: 19px;
+  font-size: 48px;
+  font-weight: 600;
   text-transform: uppercase;
-  font-family: monospace;
+  margin-bottom: 50px;
 }
 
 .wordLetter {
-  border-bottom: 0.1em solid #000;
+  border-bottom: 4px solid #fff;
+  text-align: center;
+  width: 50px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1900px) {
   .wordWrapper {
-    font-size: 4rem;
+    margin-bottom: 35px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1366px) {
   .wordWrapper {
-    font-size: 2.2rem;
-    gap: 0.2em;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .wordLetter {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wordLetter {
+    width: 26px;
+  }
+
+  .wordWrapper {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wordLetter {
+    width: 22px;
+  }
+
+  .wordWrapper {
+    gap: 9px;
   }
 }
