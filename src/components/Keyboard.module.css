@@ -1,13 +1,15 @@
 .keyboard {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 }
 
 .btn {
-  width: 100%;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 36px;
   background: #fff;
   border: none;
@@ -15,6 +17,7 @@
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 12px;
+  width: 60px;
   color: #000;
   transition: all 0.3s ease;
 }
@@ -40,29 +43,29 @@
 @media screen and (max-width: 1366px) {
   .btn {
     font-size: 25px;
-  }
-
-  .keyboard {
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    width: 40px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .keyboard {
-    grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+    justify-content: center;
+    gap: 6px;
   }
 
   .btn {
-    font-size: 30px;
+    font-size: 25px;
+    width: 27px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .keyboard {
-    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    gap: 6px;
   }
 
   .btn {
-    font-size: 28px;
+    width: 26px;
+    font-size: 24px;
   }
 }

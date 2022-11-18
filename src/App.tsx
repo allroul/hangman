@@ -63,7 +63,7 @@ function App() {
   return (
     <div className={styles.app}>
       <div className={styles.container}>
-        <img src="/hangman/tree.png" className={styles.tree} />
+        <img src="tree.png" className={styles.tree} />
         <Drawing numberOfGuesses={inCorrectLetters.length} />
         <div className={styles.mainTextWrapper}>
           {isWinner && (
