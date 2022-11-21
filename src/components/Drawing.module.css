@@ -213,3 +213,35 @@
     left: 186px;
   }
 }
+
+@supports not (-webkit-touch-callout: none) {
+  @media screen and (max-width: 500px) {
+    .rope {
+      top: 167px;
+    }
+
+    .head {
+      top: 210px;
+    }
+
+    .body {
+      top: 238.5px;
+    }
+
+    .leftArm {
+      top: 237px;
+    }
+
+    .rightArm {
+      top: 237px;
+    }
+
+    .leftLeg {
+      top: 295px;
+    }
+
+    .rightLeg {
+      top: 295px;
+    }
+  }
+}

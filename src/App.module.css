@@ -225,3 +225,11 @@ body {
     min-height: 620px;
   }
 }
+
+@supports not (-webkit-touch-callout: none) {
+  @media screen and (max-width: 500px) {
+    .tree {
+      top: -84px;
+    }
+  }
+}
