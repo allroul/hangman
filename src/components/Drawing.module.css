@@ -176,40 +176,40 @@
 
 @media screen and (max-width: 425px) {
   .rope {
-    top: 166px;
+    top: 147px;
     left: 182px;
     width: 7px;
   }
 
   .head {
-    top: 210px;
+    top: 190px;
     left: 171px;
   }
 
   .body {
-    top: 238.5px;
+    top: 218.5px;
     left: 166px;
     width: 37px;
   }
 
   .leftArm {
-    top: 237px;
+    top: 217px;
     left: 154px;
     width: 17.5px;
   }
 
   .rightArm {
-    top: 237px;
+    top: 217px;
     left: 192.5px;
   }
 
   .leftLeg {
-    top: 295px;
+    top: 275px;
     left: 168px;
   }
 
   .rightLeg {
-    top: 295px;
+    top: 275px;
     left: 186px;
   }
 }
